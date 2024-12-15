@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PMDMUD03</string>
+    <string name="borrar_proyecto">Borrar Proyecto</string>
+    <string name="nombre_del_proyecto">Nombre del proyecto</string>
+    <string name="breve_descripcion">Breve descripcion</string>
+    <string name="nuevo_proyecto">Nuevo Proyecto</string>
+    <string name="prioridad">Prioridad</string>
+    <string name="baja">Baja</string>
+    <string name="tiempo_a_emplear" />
+</resources>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewProjectActivity">
+
+    <View
+        android:id="@+id/ivProject"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <TextView
+        android:id="@+id/tvNewProject"
+        android:text="@string/nuevo_proyecto"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/ivProject"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        app:layout_constraintRight_toRightOf="@+id/ivProject"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etProjectName"
+        android:hint="@string/nombre_del_proyecto"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        app:layout_constraintRight_toRightOf="@+id/ivProject"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewProject"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/etProjectDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/breve_descripcion"
+        android:minHeight="48dp"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        app:layout_constraintRight_toRightOf="@+id/ivProject"
+        app:layout_constraintTop_toBottomOf="@+id/etProjectName" />
+
+    <TextView
+        android:id="@+id/tvPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prioridad"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        app:layout_constraintRight_toRightOf="@+id/ivProject"
+        app:layout_constraintTop_toBottomOf="@+id/etProjectDescription" />
+
+    <RadioGroup
+        android:id="@+id/rgPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/etProjectDescription"
+        app:layout_constraintStart_toStartOf="@+id/ivProject"
+        app:layout_constraintEnd_toEndOf="@+id/ivProject"
+        android:layout_marginTop="40dp">
+
+        <RadioButton
+            android:id="@+id/rbLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baja" />
+
+        <RadioButton
+            android:id="@+id/rbMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media" />
+
+        <RadioButton
+            android:id="@+id/rbHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alta" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tvHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiempo a emplear"
+        app:layout_constraintTop_toBottomOf="@+id/rgPriority"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/etHours"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:hint="Tiempo en horas"
+        android:minHeight="48dp"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        app:layout_constraintRight_toRightOf="@+id/ivProject"
+        app:layout_constraintTop_toBottomOf="@id/tvHours" />
+
+    <TextView
+        android:id="@+id/tvLenguage"
+        android:text="Lenguaje"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/etHours"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"/>
+
+    <Spinner
+        android:id="@+id/spLeng"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toRightOf="@id/tvLenguage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHours" />
+
+    <TextView
+        android:id="@+id/tvDetail"
+        android:text="Detalle del proyecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/spLeng"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/etDetail"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:hint="Detalle del proyecto"
+        android:minHeight="70dp"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        app:layout_constraintRight_toRightOf="@+id/ivProject"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
+
+    <Button
+        android:id="@+id/btnAddProject"
+        android:text="Guardar proyecto"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@+id/ivProject"
+        app:layout_constraintLeft_toLeftOf="@+id/ivProject"
+        app:layout_constraintTop_toBottomOf="@+id/etDetail"
+        android:layout_marginTop="20dp"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
